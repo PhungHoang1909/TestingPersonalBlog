@@ -29,7 +29,7 @@ class Author_Login(unittest.TestCase):
         username.send_keys("admin101")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("admin101")
+        password.send_keys("admin1012")
 
         self.driver.find_element(By.NAME, "submit").click()
 
