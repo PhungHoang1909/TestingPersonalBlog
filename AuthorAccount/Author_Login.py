@@ -24,6 +24,10 @@ class Author_Login(unittest.TestCase):
 
         self.driver.find_element(By.XPATH, "//input[@value='login now']").click()
 
+        expected_url = "http://localhost/project/admin/dashboard.php"
+        actual_url = self.driver.current_url
+        assert actual_url == expected_url, f"Expected URL: {expected_url}, Actual URL: {actual_url}"
+
     def test_Login_Fail(self):
         username = self.driver.find_element(By.NAME, "name")
         username.send_keys("admin101")
@@ -32,6 +36,10 @@ class Author_Login(unittest.TestCase):
         password.send_keys("admin1012")
 
         self.driver.find_element(By.NAME, "submit").click()
+
+        message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        self.assertEqual(message_element.text, "incorrect username or password!", "not as expected")
+
 
 if __name__ == '__main__':
     unittest.main()
