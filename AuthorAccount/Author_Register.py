@@ -27,6 +27,10 @@ class Author_Register(unittest.TestCase):
 
         self.driver.find_element(By.NAME, "submit").click()
 
+        expected_url = "http://localhost/project/admin/dashboard.php"
+        actual_url = self.driver.current_url
+        assert actual_url == expected_url, f"Expected URL: {expected_url}, Actual URL: {actual_url}"
+
 
     def test_Register_Fail(self):
         username = self.driver.find_element(By.NAME, "name")
@@ -39,6 +43,15 @@ class Author_Register(unittest.TestCase):
         cpassword.send_keys("admin102")
 
         self.driver.find_element(By.NAME, "submit").click()
+
+        # Username already exist:
+        message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        self.assertEqual(message_element.text, "username already exists!", "not as expected")
+
+        # confirm passowrd not matched!
+        message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        self.assertEqual(message_element.text, "confirm passowrd not matched!", "not as expected")
+
 
 if __name__ == '__main__':
     unittest.main()
