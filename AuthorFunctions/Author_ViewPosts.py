@@ -89,6 +89,15 @@ class Author_ViewPosts(unittest.TestCase):
         #Edit
         #self.driver.find_element(By.XPATH,"//a[@class='inline-option-btn' and contains(@href, 'edit_post.php?id=18')]").click()
 
+        # Delete comments
+        # self.driver.find_element(By.NAME, "delete_comment").click()
+        # try:
+        #     alert = self.driver.switch_to.alert
+        #
+        #     alert.accept()
+        # except:
+        #     pass
+
 
 
 
