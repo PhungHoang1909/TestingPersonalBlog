@@ -37,3 +37,6 @@ class Author_Logout(unittest.TestCase):
         except:
             pass
 
+        expected_url = "http://localhost/project/index.php"
+        actual_url = self.driver.current_url
+        assert actual_url == expected_url, f"Expected URL: {expected_url}, Actual URL: {actual_url}"
