@@ -32,6 +32,9 @@ class Author_Update(unittest.TestCase):
 
         self.driver.find_element(By.NAME, "submit").click()
 
+        message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        self.assertEqual(message_element.text, "password updated successfully!","Password update message is not as expected")
+
     def test_Update_Fail(self):
         username = self.driver.find_element(By.NAME, "name")
         username.send_keys("admin101")
@@ -46,5 +49,16 @@ class Author_Update(unittest.TestCase):
         con_password.send_keys("admin104")
 
         self.driver.find_element(By.NAME, "submit").click()
+
+        # Fail: Old password not correct:
+        message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        self.assertEqual(message_element.text, "old password not matched!",
+                         "Password update message is not as expected")
+
+        # Fail: New Password not the same:
+        # message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+        # self.assertEqual(message_element.text, "confirm password not matched!",
+        #                  "Password update message is not as expected")
+
 
 
