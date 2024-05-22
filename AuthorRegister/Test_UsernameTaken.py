@@ -20,10 +20,10 @@ class Test_UsernameTaken(unittest.TestCase):
         username.send_keys("JaneDoe")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("JaneDoe1234")
+        password.send_keys("StrongPassword!123")
 
         cpassword = self.driver.find_element(By.NAME, "cpass")
-        cpassword.send_keys("JaneDoe1234")
+        cpassword.send_keys("StrongPassword!123")
 
         self.driver.find_element(By.NAME, "submit").click()
 

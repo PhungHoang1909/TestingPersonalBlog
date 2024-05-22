@@ -16,6 +16,9 @@ class Test_MissFields(unittest.TestCase):
         self.driver.quit()
 
     def test_MissFields(self):
+
+        self.driver.find_element(By.NAME, "submit").click()
+
         username = self.driver.find_element(By.NAME, "name")
         is_required = username.get_attribute("required")
         self.assertEqual(is_required, "true", "Please fill out this field.")
