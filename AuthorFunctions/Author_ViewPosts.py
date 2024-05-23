@@ -98,6 +98,10 @@ class Author_ViewPosts(unittest.TestCase):
         # except:
         #     pass
 
+#         message_element = self.driver.find_element(By.XPATH, "//div[@class='message']/span")
+#         self.assertEqual(message_element.text, "post deleted successfully!",
+#                          "not as expected")
+
 
 
 
