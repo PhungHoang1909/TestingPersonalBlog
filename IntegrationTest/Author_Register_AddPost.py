@@ -21,13 +21,13 @@ class Author_Register_AddPost(unittest.TestCase):
         self.driver.implicitly_wait(2)
 
         username = self.driver.find_element(By.NAME, "name")
-        username.send_keys("admin104")
+        username.send_keys("JaneDoe03")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("admin104")
+        password.send_keys("656565aA@")
 
         cpassword = self.driver.find_element(By.NAME, "cpass")
-        cpassword.send_keys("admin104")
+        cpassword.send_keys("656565aA@")
 
         self.driver.find_element(By.NAME, "submit").click()
         self.driver.implicitly_wait(2)
@@ -35,16 +35,16 @@ class Author_Register_AddPost(unittest.TestCase):
         self.driver.find_element(By.XPATH, "//a[@href='add_posts.php' and @class='btn']").click()
 
         title = self.driver.find_element(By.NAME, "title")
-        title.send_keys("My Post Title")
+        title.send_keys("New Day")
 
         content = self.driver.find_element(By.NAME, "content")
-        content.send_keys("This is my post content")
+        content.send_keys("Hit a book")
 
         category = self.driver.find_element(By.NAME, "category")
         select_category = Select(category).select_by_value("lifestyle")
 
         file_input = self.driver.find_element(By.NAME, "image")
-        image_path = r"D:\Study\Năm 3\HKII\KiemThuPhanMem\UnitTest_PersonalBlog\AuthorFunctions\img0.jpg"
+        image_path = r"D:\Study\Năm 3\HKII\KiemThuPhanMem\UnitTest_PersonalBlog\img.jpg"
         file_input.send_keys(image_path)
 
         self.driver.find_element(By.NAME, "publish").click()
@@ -60,13 +60,13 @@ class Author_Register_AddPost(unittest.TestCase):
         self.driver.implicitly_wait(2)
 
         username = self.driver.find_element(By.NAME, "name")
-        username.send_keys("admin104")
+        username.send_keys("JaneDoe03")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("admin104")
+        password.send_keys("656565aA@")
 
         cpassword = self.driver.find_element(By.NAME, "cpass")
-        cpassword.send_keys("admin104")
+        cpassword.send_keys("656565aA@")
 
         self.driver.find_element(By.NAME, "submit").click()
         self.driver.implicitly_wait(2)
@@ -74,16 +74,16 @@ class Author_Register_AddPost(unittest.TestCase):
         self.driver.find_element(By.XPATH, "//a[@href='add_posts.php' and @class='btn']").click()
 
         title = self.driver.find_element(By.NAME, "title")
-        title.send_keys("My Post Title")
+        title.send_keys("New Day")
 
         content = self.driver.find_element(By.NAME, "content")
-        content.send_keys("This is my post content")
+        content.send_keys("Hit a book")
 
         category = self.driver.find_element(By.NAME, "category")
         select_category = Select(category).select_by_value("lifestyle")
 
         file_input = self.driver.find_element(By.NAME, "image")
-        image_path = r"D:\Study\Năm 3\HKII\KiemThuPhanMem\UnitTest_PersonalBlog\AuthorFunctions\img0.jpg"
+        image_path = r"D:\Study\Năm 3\HKII\KiemThuPhanMem\UnitTest_PersonalBlog\img.jpg"
         file_input.send_keys(image_path)
 
         self.driver.find_element(By.NAME, "draft").click()

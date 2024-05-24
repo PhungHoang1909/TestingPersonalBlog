@@ -16,10 +16,10 @@ class Author_Login_Comments(unittest.TestCase):
         self.driver.find_element(By.LINK_TEXT, "Author").click()
         self.driver.implicitly_wait(2)
         username = self.driver.find_element(By.NAME, "name")
-        username.send_keys("admin101")
+        username.send_keys("JaneDoe02")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("admin101")
+        password.send_keys("656565aA@")
 
         self.driver.find_element(By.XPATH, "//input[@value='login now']").click()
         self.driver.implicitly_wait(2)
@@ -27,24 +27,6 @@ class Author_Login_Comments(unittest.TestCase):
     def test_Login_Comments(self):
         self.driver.find_element(By.LINK_TEXT, "See Comments").click()
         self.driver.implicitly_wait(2)
-
-        # View Post
-        # self.driver.find_element(By.LINK_TEXT, "view post").click()
-        # # View post - Edit
-        # edit_button = self.driver.find_element(By.XPATH,"//a[@class='inline-option-btn' and contains(@href, 'edit_post.php?id=17')]")
-        # edit_button.click()
-        # # View post - Delete
-        # delete_button = self.driver.find_element(By.CLASS_NAME, "inline-delete-btn")
-        # delete_button.click()
-        # try:
-        #     alert = self.driver.switch_to.alert
-        #
-        #     alert.accept()
-        # except:
-        #     pass
-        # View post - Go back
-        # go_back_button = self.driver.find_element(By.XPATH,"//a[@class='inline-option-btn' and @href='view_posts.php']")
-        # go_back_button.click()
 
         # Delete Comment
         self.driver.find_element(By.NAME, "delete_comment").click()

@@ -20,13 +20,13 @@ class Author_Register_AddPost(unittest.TestCase):
         self.driver.implicitly_wait(2)
 
         username = self.driver.find_element(By.NAME, "name")
-        username.send_keys("admin104")
+        username.send_keys("JaneDoe02")
 
         password = self.driver.find_element(By.NAME, "pass")
-        password.send_keys("admin104")
+        password.send_keys("656565aA@")
 
         cpassword = self.driver.find_element(By.NAME, "cpass")
-        cpassword.send_keys("admin104")
+        cpassword.send_keys("656565aA@")
 
         self.driver.find_element(By.NAME, "submit").click()
         self.driver.implicitly_wait(2)
